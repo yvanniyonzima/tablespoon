@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- source:https://stackoverflow.com/questions/4259467/how-to-make-space-between-linearlayout-children -->
+<!-- this is for the spacing between the recipes -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:height="20dp"
+        android:width="0dp"/>
+</shape>

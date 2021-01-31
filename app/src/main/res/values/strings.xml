@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tablespoon</string>
+
+    <string-array name="recipe_types">
+        <item>Soup</item>
+        <item>Appetizer</item>
+        <item>Salad</item>
+        <item>Main</item>
+        <item>Dessert</item>
+        <item>Other</item>
+    </string-array>
+</resources>
