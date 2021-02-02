@@ -56,6 +56,7 @@ public class MyRecipes extends AppCompatActivity
         newRecipe.setOnClickListener((View V) ->
         {
             Intent newRecipeIntent = new Intent(MyRecipes.this,AddRecipeActivity.class);
+            newRecipeIntent.putExtra("FROM","MY_RECIPES_ACTIVITY");
             startActivity(newRecipeIntent);
         });
 

@@ -2,11 +2,12 @@ package com.example.tablespoon.classes;
 
 import android.media.Image;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Recipe {
+public class Recipe implements Serializable {
 
     private String description;
     private String name;
@@ -27,6 +28,11 @@ public class Recipe {
         this.steps = steps;
         this.name = name;
         this.type = type;
+    }
+
+    public Recipe(Recipe otherRecipe)
+    {
+        this(otherRecipe.getName(), otherRecipe.getDescription(), otherRecipe.getIngredients(), otherRecipe.getServing(), otherRecipe.getSteps(), otherRecipe.getType());
     }
 
     public String getName() {

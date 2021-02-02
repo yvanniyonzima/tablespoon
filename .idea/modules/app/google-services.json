@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "376608512638",
+    "firebase_url": "https://tablespoon-52a63.firebaseio.com",
+    "project_id": "tablespoon-52a63",
+    "storage_bucket": "tablespoon-52a63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376608512638:android:2977e353f32f6aae99962f",
+        "android_client_info": {
+          "package_name": "com.example.tablespoon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376608512638-nboohgn7pmk9igf93aqg6ahvfcqsrfo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tablespoon",
+            "certificate_hash": "6d7653f99a5ea1954979fe913c2c4646f0b3429a"
+          }
+        },
+        {
+          "client_id": "376608512638-gihrlgi39qs3tjler89loa8d5ejbccg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe_YVwSHeNJnEd4GBL9ON3F4slam3liwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376608512638-efq57a6gfq1pnavdr1mhcqmdd23gs5sb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

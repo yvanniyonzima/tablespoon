@@ -7,6 +7,16 @@
     android:background="@drawable/my_recipes_background">
 
     <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:text="(Optional)"
+        app:layout_constraintStart_toEndOf="@+id/recipe_type_choice"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <TextView
         android:id="@+id/recipe_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,9 +51,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/shape"
+        android:paddingLeft="5dp"
         android:ems="10"
         android:hint="e.g: Chocolate Brownies"
-        android:inputType="textPersonName"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recipe_name_label" />
@@ -102,7 +112,7 @@
         android:layout_width="181dp"
         android:layout_height="23dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="Description (optional)"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,6 +126,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/shape"
         android:hint="The BEST brownie recipe! With crispy edges, fudgy middles, and rich chocolate flavor, these homemade brownies will disappear in no time"
+        android:paddingLeft="5dp"
         android:textAlignment="textStart"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +137,7 @@
         android:layout_width="108dp"
         android:layout_height="25dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:text="Ingredients"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +151,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/shape"
         android:hint="e.g: 1 cup of all purpose flour"
+        android:paddingLeft="5dp"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -150,6 +162,7 @@
         android:layout_height="210dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
         android:background="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingredient_field" />
@@ -182,6 +195,16 @@
         android:text="Cancel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingredient_listView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:text="(Optional)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
