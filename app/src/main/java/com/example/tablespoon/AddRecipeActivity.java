@@ -1,6 +1,5 @@
 package com.example.tablespoon;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -104,7 +103,7 @@ public class AddRecipeActivity extends AppCompatActivity
         //handle cancel adding new recipe
         cancelButton.setOnClickListener((View v) ->
         {
-            Intent goBackToRecipes = new Intent(AddRecipeActivity.this,MyRecipes.class);
+            Intent goBackToRecipes = new Intent(AddRecipeActivity.this, MyRecipesActivity.class);
             startActivity(goBackToRecipes);
 
         });

@@ -1,6 +1,7 @@
 package com.example.tablespoon.classes;
 
 //source for code : https://www.youtube.com/watch?v=eCfJMseN0-8
+import android.app.Application;
 import android.security.keystore.KeyNotYetValidException;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,8 @@ public class FirebaseDatabaseHelper {
     private DatabaseReference mReference;
     private List<Recipe> recipes = new ArrayList<>();
 
+
+
     public interface DataStatus
     {
         //the methods in this interface are to be implemented for CRUD operations
@@ -34,10 +37,11 @@ public class FirebaseDatabaseHelper {
 
     }
 
-    public FirebaseDatabaseHelper()
+    public FirebaseDatabaseHelper(String reference)
     {
         mDatabase = FirebaseDatabase.getInstance();
-        mReference = mDatabase.getReference("recipes/yvanniyonzima");
+        //mDatabase.setPersistenceEnabled(true);
+        mReference = mDatabase.getReference(reference);
     }
 
     //functions for CRUD operations for recipes
@@ -48,6 +52,28 @@ public class FirebaseDatabaseHelper {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
+//                recipes.clear();
+//                List<String> keys = new ArrayList<>();
+//                for(DataSnapshot keyNode : dataSnapshot.getChildren())
+//                {
+//                    keys.add(keyNode.getKey());
+//                    Recipe recipe = keyNode.getValue(Recipe.class);
+//                    recipes.add(recipe);
+//                }
+//                dataStatus.DataIsLoaded(recipes,keys);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError)
+            {
+
+            }
+        });
+
+        mReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 recipes.clear();
                 List<String> keys = new ArrayList<>();
                 for(DataSnapshot keyNode : dataSnapshot.getChildren())
@@ -61,17 +87,17 @@ public class FirebaseDatabaseHelper {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
     }
 
-    public void addRecipe(Recipe recipe, final DataStatus dataStatus)
+    public void addRecipe(Recipe recipe, final DataStatus dataStatus, String key)
     {
         //DataStatus is the interface
-        String key = mReference.push().getKey();
-        mReference.child(key).setValue(recipe)
+        //String key = mReference.push().getKey(); //this makes a child node and gives it a unique key
+        mReference.child(key.toLowerCase()).setValue(recipe)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid)
