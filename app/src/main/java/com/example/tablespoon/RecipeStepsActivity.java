@@ -10,10 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tablespoon.classes.FirebaseDatabaseHelper;
 import com.example.tablespoon.classes.Recipe;
 
 import java.util.ArrayList;
@@ -54,7 +56,7 @@ public class RecipeStepsActivity extends AppCompatActivity
         //get the intent from the AddRecipeActivity
         completeRecipe = new Recipe((Recipe) getIntent().getSerializableExtra("RECIPE"));
 
-        //set the text for the lable
+        //set the text for the label
         addStepsLabel.setText("Add steps for recipe: " + completeRecipe.getName());
 
         //handle cancel click
@@ -69,7 +71,7 @@ public class RecipeStepsActivity extends AppCompatActivity
                         public void onClick(DialogInterface dialog, int which)                              //what happens when the yes button is clicked
                         {
                             //got back to users recipe list
-                            Intent cancelAddRecipe2 = new Intent(RecipeStepsActivity.this, MyRecipes.class);
+                            Intent cancelAddRecipe2 = new Intent(RecipeStepsActivity.this, MyRecipesActivity.class);
                             startActivity(cancelAddRecipe2);
                         }
                     })
@@ -145,6 +147,32 @@ public class RecipeStepsActivity extends AppCompatActivity
                         .setMessage("Please add recipe steps and try again")
                         .setCancelable(true)
                         .show();
+            }
+            else
+            {
+                //add the recipe steps to the Recipe object
+                completeRecipe.setSteps(steps);
+
+                new FirebaseDatabaseHelper("users/yvanniyonzima/recipes").addRecipe(completeRecipe, new FirebaseDatabaseHelper.DataStatus() {
+                    @Override
+                    public void DataIsLoaded(List<Recipe> recipes, List<String> keys) { }
+
+                    @Override
+                    public void DataIsInserted()
+                    {
+                        Toast.makeText(RecipeStepsActivity.this,"The recipe " + completeRecipe.getName() + " has been successfully added", Toast.LENGTH_LONG).show();
+
+                    }
+
+                    @Override
+                    public void DataIsUpdated() { }
+
+                    @Override
+                    public void DataIsDeleted() { }
+                }, completeRecipe.getName());
+
+                Intent goBackToRecipes = new Intent(RecipeStepsActivity.this, MyRecipesActivity.class);
+                startActivity(goBackToRecipes);
             }
         });
     }

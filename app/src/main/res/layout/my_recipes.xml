@@ -39,28 +39,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/recipe_page_bowl" />
 
-    <ScrollView
-        android:id="@+id/recipe_page_scroll"
-        android:layout_width="366dp"
-        android:layout_height="530dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipe_recyclerView"
+        android:layout_width="396dp"
+        android:layout_height="540dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <LinearLayout
-            android:id="@+id/recipes_lin_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:showDividers="middle"
-            android:divider="@drawable/empty_tall_divider"/>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/search_recipe"
+        android:padding="4dp"
+        android:scrollbars="vertical"/>
 
     <SearchView
         android:id="@+id/search_recipe"
@@ -73,7 +61,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Search"
-        app:layout_constraintBottom_toTopOf="@+id/recipe_page_scroll"
         app:layout_constraintEnd_toStartOf="@+id/add_recipe"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -82,13 +69,11 @@
         android:id="@+id/add_recipe"
         android:layout_width="48dp"
         android:layout_height="43dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="355dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426"
         app:srcCompat="@drawable/baseline_add_black_18dp" />
     <!--
         <View
