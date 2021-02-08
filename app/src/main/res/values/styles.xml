@@ -40,4 +40,63 @@
 
     </style>
 
+<!-- TO BE USED IN FOR THE RECIPE VIEW -->
+
+    <!-- recipe title, ingredients label, and steps label -->
+    <style name="recipe_title">
+
+        <item name="android:textSize">
+            28sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.05
+        </item>
+
+        <item name="android:textColor">
+            #6D6D6D
+        </item>
+
+        <item name="android:background">
+            @drawable/recipe_view
+        </item>
+        <item name="android:paddingLeft">
+            4dp
+        </item>
+    </style>
+
+    <!-- recipe description -->
+    <style name="recipe_description">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.05
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <!-- recipe steps -->
+    <style name="view_recipe_ingredients_steps">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.05
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
 </resources>

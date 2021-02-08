@@ -161,14 +161,15 @@ public class RecipeStepsActivity extends AppCompatActivity
                     public void DataIsInserted()
                     {
                         Toast.makeText(RecipeStepsActivity.this,"The recipe " + completeRecipe.getName() + " has been successfully added", Toast.LENGTH_LONG).show();
-
                     }
+                    @Override
+                    public void DataIsUpdated() {}
 
                     @Override
-                    public void DataIsUpdated() { }
+                    public void DataIsDeleted() {}
 
                     @Override
-                    public void DataIsDeleted() { }
+                    public void RecipeIsLoaded(Recipe recipe) {}
                 }, completeRecipe.getName());
 
                 Intent goBackToRecipes = new Intent(RecipeStepsActivity.this, MyRecipesActivity.class);

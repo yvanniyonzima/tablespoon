@@ -35,6 +35,8 @@ public class FirebaseDatabaseHelper {
         void DataIsUpdated();
         void DataIsDeleted();
 
+        void RecipeIsLoaded(Recipe recipe);
+
     }
 
     public FirebaseDatabaseHelper(String reference)
@@ -45,6 +47,8 @@ public class FirebaseDatabaseHelper {
     }
 
     //functions for CRUD operations for recipes
+
+    //READ ALL RECIPES
     public void readRecipe(final DataStatus dataStatus)
     {
         //every time the recipe is update, this listener will call the below onDataChange method
@@ -52,15 +56,15 @@ public class FirebaseDatabaseHelper {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-//                recipes.clear();
-//                List<String> keys = new ArrayList<>();
-//                for(DataSnapshot keyNode : dataSnapshot.getChildren())
-//                {
-//                    keys.add(keyNode.getKey());
-//                    Recipe recipe = keyNode.getValue(Recipe.class);
-//                    recipes.add(recipe);
-//                }
-//                dataStatus.DataIsLoaded(recipes,keys);
+                recipes.clear();
+                List<String> keys = new ArrayList<>();
+                for(DataSnapshot keyNode : dataSnapshot.getChildren())
+                {
+                    keys.add(keyNode.getKey());
+                    Recipe recipe = keyNode.getValue(Recipe.class);
+                    recipes.add(recipe);
+                }
+                dataStatus.DataIsLoaded(recipes,keys);
 
             }
 
@@ -104,6 +108,17 @@ public class FirebaseDatabaseHelper {
                     {
                         //display success message
                         dataStatus.DataIsInserted();
+                    }
+                });
+    }
+
+    public void deleteRecipe(String key, final DataStatus dataStatus)
+    {
+        mReference.child(key).setValue(null)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        dataStatus.DataIsDeleted();
                     }
                 });
     }

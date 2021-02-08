@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +38,7 @@ public class MyRecipesActivity extends AppCompatActivity
     private LinearLayout recipesLayout;
 
     ArrayList<RecipeCardItem> recipeRecyclerItems;
-
+    ArrayList<Recipe> mRecipes;
 
     //class to hold recipe objects
     @Override
@@ -81,6 +82,19 @@ public class MyRecipesActivity extends AppCompatActivity
         mRecyclerViewAdapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
 
             @Override
+            public void onItemClick(int position) {
+                //get the recipe clicked on
+                Recipe recipeToView = mRecipes.get(position);
+
+                Log.i("MyRecipeActivity",recipeToView.toString());
+
+                //create an intent to the recipe view
+                Intent toRecipeView = new Intent(MyRecipesActivity.this, ViewRecipeActivity.class);
+                toRecipeView.putExtra("RECIPE_TO_VIEW",recipeToView);
+                startActivity(toRecipeView);
+            }
+
+            @Override
             public void onDeleteClick(int position) {
                 new AlertDialog.Builder(MyRecipesActivity.this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
@@ -90,8 +104,40 @@ public class MyRecipesActivity extends AppCompatActivity
                             @Override
                             public void onClick(DialogInterface dialog, int which)
                             {
-                                //delete the recipe and remove the item from the recycler view
+                                //get the recipe name to access the key in firebase
+                                    //the key is the name of the recipe in lowercase
+                                String name = mRecipes.get(position).getName();
+                                String key = name.toLowerCase();
+
+                                //remove the item from the recycler view
                                 removeItem(position);
+
+                                //remove the item from firebase
+                                new FirebaseDatabaseHelper("users/yvanniyonzima/recipes").deleteRecipe(key, new FirebaseDatabaseHelper.DataStatus() {
+                                    @Override
+                                    public void DataIsLoaded(List<Recipe> recipes, List<String> keys) {}
+
+                                    @Override
+                                    public void DataIsInserted() {
+
+                                    }
+
+                                    @Override
+                                    public void DataIsUpdated() {
+
+                                    }
+
+                                    @Override
+                                    public void DataIsDeleted()
+                                    {
+                                        Toast.makeText(MyRecipesActivity.this,"The recipe " + name + " has been successfully deleted", Toast.LENGTH_LONG).show();
+                                    }
+
+                                    @Override
+                                    public void RecipeIsLoaded(Recipe recipe) {
+
+                                    }
+                                });
                             }
                         })
                         .setNegativeButton("No",null)
@@ -123,6 +169,10 @@ public class MyRecipesActivity extends AppCompatActivity
                 //System.out.println(recipe);
                 Log.d("RECIPE",recipes.get(0).toString());
 
+                //populate the recipes arrayList
+                mRecipes = new ArrayList<>();
+                mRecipes.addAll(recipes);
+
                 //populate the card items array list
                 addRecyclerViewItems(recipes);
 
@@ -139,7 +189,15 @@ public class MyRecipesActivity extends AppCompatActivity
             public void DataIsUpdated() {}
             @Override
             public void DataIsDeleted() {}
+            @Override
+            public void RecipeIsLoaded(Recipe recipe) {}
         });
 
+    }
+
+    public Recipe viewRecipe(String name)
+    {
+
+        return null;
     }
 }
