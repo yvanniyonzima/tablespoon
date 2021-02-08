@@ -52,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void DataIsDeleted() {}
+
+            @Override
+            public void RecipeIsLoaded(Recipe recipe) {
+
+            }
         });
     }
 }

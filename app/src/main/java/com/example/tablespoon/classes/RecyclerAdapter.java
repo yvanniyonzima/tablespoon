@@ -25,6 +25,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     public interface OnItemClickListener
     {
+        void onItemClick(int position);
         void onDeleteClick(int position);
     }
 
@@ -48,8 +49,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             mRecipeDescriptionTextView2 = (TextView) itemView.findViewById(R.id.recipe_description_card);
             mDeleteRecyclerItem = (ImageView) itemView.findViewById(R.id.delete_recycler_item);
 
+            //for viewing a recipe
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    if (listener != null)
+                    {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION)
+                        {
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
 
-            //for deleting a recycler item
+            //for removing item from recycler view
             mDeleteRecyclerItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)

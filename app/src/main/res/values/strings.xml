@@ -9,4 +9,39 @@
         <item>Dessert</item>
         <item>Other</item>
     </string-array>
+
+
+    <!-- for the recipe view default strings -->
+    <string name="recipe_name">
+        Buttermilk Chicken
+    </string>
+    <string name="description">
+        I love the tangy tenderization that the buttermilk provides. After the buttermilk soak, dredge the chicken pieces in seasoned flour, and fry them in hot oil until crisp and cooked.
+    </string>
+    <string name="recipe_ingredients">
+        1.Chicken<br></br>
+        2.Butter<br></br>
+        3.Peas<br></br>
+        4.Thyme<br></br>
+        5.Buttermilk<br></br>
+        6.Milk<br></br>
+        7.....
+    </string>
+    <string name="recipe_steps">
+        Step 1. Toss together chicken pieces, black pepper, salt, paprika, rosemary, thyme, oregano, sage, white pepper, and cayenne in a large bowl to coat.<br></br><br></br>
+
+        Step 2. Stir in buttermilk until chicken is coated. Refrigerate for 6 hours.<br></br><br></br>
+
+        Step 3. Combine flour, salt, paprika, cayenne, garlic powder, white pepper, and onion powder in a large shallow dish.<br></br><br></br>
+
+        Step 4. Remove chicken from the buttermilk and dredge each piece in the seasoned flour. Shake off any excess and transfer to a plate.<br></br><br></br>
+
+        Step 5. Heat peanut oil in a large Dutch oven to 350 degrees F (175 degrees C). Add all the chicken to the pan and cook for 10 minutes.<br></br><br></br>
+
+        Step 6. Turn chicken pieces and cook for another 10-15 minutes.<br></br><br></br>
+
+        Step 7. Remove chicken from the oil and transfer to a cooling rack set over a paper towel lined baking sheet. Let sit for 10 minutes before serving.<br></br><br></br>
+    </string>
+
+
 </resources>

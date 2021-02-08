@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_recipes_background">
+
+
+    <ImageView
+        android:id="@+id/view_recipe_image"
+        android:layout_width="410dp"
+        android:layout_height="189dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burger" />
+
+    <ScrollView
+        android:id="@+id/view_recipe_items"
+        android:layout_width="408dp"
+        android:layout_height="531dp"
+        android:layout_marginTop="6dp"
+
+        android:background="@drawable/recipe_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_recipe_image">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/view_recipe_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text = "@string/recipe_name"
+                android:textAppearance="@style/recipe_title"/>
+
+            <TextView
+                android:id="@+id/view_recipe_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text = "@string/description"
+                android:textAppearance="@style/recipe_description"/>
+
+            <TextView
+                android:id="@+id/view_recipe_ingredient_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text = "Ingredients"
+                android:textAppearance="@style/recipe_title"/>
+
+            <TextView
+                android:id="@+id/view_recipe_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text = "@string/recipe_ingredients"
+                android:textAppearance="@style/view_recipe_ingredients_steps"/>
+
+            <TextView
+                android:id="@+id/view_recipe_steps_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text = "Steps"
+                android:textAppearance="@style/recipe_title"/>
+
+            <TextView
+                android:id="@+id/view_recipe_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text = "@string/recipe_steps"
+                android:textAppearance="@style/view_recipe_ingredients_steps"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
