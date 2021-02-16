@@ -97,7 +97,7 @@ public class FirebaseDatabaseHelper {
         });
     }
 
-    public void addRecipe(Recipe recipe, final DataStatus dataStatus, String key)
+    public void addRecipe(String key,Recipe recipe, final DataStatus dataStatus )
     {
         //DataStatus is the interface
         //String key = mReference.push().getKey(); //this makes a child node and gives it a unique key
@@ -119,6 +119,17 @@ public class FirebaseDatabaseHelper {
                     @Override
                     public void onSuccess(Void aVoid) {
                         dataStatus.DataIsDeleted();
+                    }
+                });
+    }
+
+    public void updateRecipe(String key, Recipe recipe,final DataStatus dataStatus)
+    {
+        mReference.child(key).setValue(recipe)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        dataStatus.DataIsUpdated();
                     }
                 });
     }

@@ -58,7 +58,7 @@ public class MyRecipesActivity extends AppCompatActivity
         mNewRecipe.setOnClickListener((View V) ->
         {
             Intent newRecipeIntent = new Intent(MyRecipesActivity.this,AddRecipeActivity.class);
-            newRecipeIntent.putExtra("FROM","MY_RECIPES_ACTIVITY");
+            newRecipeIntent.putExtra("INSTANCE","add_new_recipe");
             startActivity(newRecipeIntent);
         });
 
@@ -90,7 +90,7 @@ public class MyRecipesActivity extends AppCompatActivity
 
                 //create an intent to the recipe view
                 Intent toRecipeView = new Intent(MyRecipesActivity.this, ViewRecipeActivity.class);
-                toRecipeView.putExtra("RECIPE_TO_VIEW",recipeToView);
+                toRecipeView.putExtra("RECIPE",recipeToView);
                 startActivity(toRecipeView);
             }
 
@@ -195,9 +195,4 @@ public class MyRecipesActivity extends AppCompatActivity
 
     }
 
-    public Recipe viewRecipe(String name)
-    {
-
-        return null;
-    }
 }

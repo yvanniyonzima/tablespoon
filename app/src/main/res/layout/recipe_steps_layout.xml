@@ -40,6 +40,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape"
         android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:hint="e.g: Combine the sugar, flour, powdered sugar, cocoa powder, chocolate chips, and salt in a medium bowl."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
