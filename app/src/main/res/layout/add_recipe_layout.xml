@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/my_recipes_background">
 
+
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
