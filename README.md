@@ -15,5 +15,6 @@ PLANNING YOUR WEEK
 Lastly, the app will feature a meal planner. Here, the user will be able to create weekly menus. They will have the choice to add recipes they already have stored, or add different ones to the planner. If the recipes does not exist, they will pe prompted on wether or not they want to save it. An added benefit for the weekly planner will be that the user will be able to keep track of their calorie consumption. This is given that they follow their plan.
 
 
-VISION
-------
+FIGMA DESING
+-----------
+![signin_signup](https://user-images.githubusercontent.com/44048068/108617173-1f4ee780-73e2-11eb-8e82-8f2db98d5a15.png)
