@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/delete_recipe_menu"
-        android:title="Delete"
+        android:title="Delete Recipe"
         app:showAsAction="never"
         />
 </menu>

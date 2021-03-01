@@ -8,7 +8,6 @@ import android.util.Log;
 
 import com.example.tablespoon.classes.FirebaseDatabaseHelper;
 import com.example.tablespoon.classes.Recipe;
-import com.example.tablespoon.classes.RecipeCardItem;
 
 import java.util.ArrayList;
 import java.util.List;

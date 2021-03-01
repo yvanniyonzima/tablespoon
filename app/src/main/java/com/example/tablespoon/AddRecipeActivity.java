@@ -100,39 +100,40 @@ public class AddRecipeActivity extends AppCompatActivity
         Log.i(TAG,"Instance: " + mInstance);
 
         //check which activity launched this one
-        if(mInstance.equals("add_new_recipe"))
+        if(mInstance.equals("edit_recipe") || mInstance.equals("add_recipe_search"))
         {
-            mRecipe = new Recipe((Recipe) getIntent().getSerializableExtra("RECIPE"));
-            mRecipeNameField.setText(mRecipe.getName());
-            mServingsField.setText(mRecipe.getServing());
-            mRecipeDescriptionField.setText(mRecipe.getDescription());
-            mIngredients.addAll(mRecipe.getIngredients());
-            mIngredientsViewAdapter.notifyDataSetChanged();
-            int spinnerPosition = recipeTypeAdapter.getPosition(mRecipe.getType());
-            mRecipeTypeChoice.setSelection(spinnerPosition);
 
-        }
-        else if(mInstance.equals("edit_recipe"))
-        {
-            //change the text of cancel button to save
-            mCancelButton.setText("Save");
             //get the recipe
             mRecipe = new Recipe((Recipe) getIntent().getSerializableExtra("RECIPE"));
 
             //set the text in textboxes
             mRecipeNameField.setText(mRecipe.getName());
             mServingsField.setText(mRecipe.getServing());
-            mRecipeDescriptionField.setText(mRecipe.getDescription());
+
+            if(!mRecipe.getDescription().isEmpty() || mRecipe.getDescription() != null)
+            {
+                mRecipeDescriptionField.setText(mRecipe.getDescription());
+            }
             mIngredients.addAll(mRecipe.getIngredients());
             mIngredientsViewAdapter.notifyDataSetChanged();
-            int spinnerPosition = recipeTypeAdapter.getPosition(mRecipe.getType());
-            mRecipeTypeChoice.setSelection(spinnerPosition);
+            if(!mRecipe.getName().isEmpty())
+            {
+                int spinnerPosition = recipeTypeAdapter.getPosition(mRecipe.getType());
+                mRecipeTypeChoice.setSelection(spinnerPosition);
+            }
+
+        }
+        else
+        {
 
         }
 
-        //handle cancel adding new recipe/saving edited recipe
+        //handle cancel/save click
         if(mInstance.equals("edit_recipe"))
         {
+            //change the text of cancel button to save
+            mCancelButton.setText("Save");
+
             //cancel button is now save button
             mCancelButton.setOnClickListener((View v) ->
             {
@@ -165,6 +166,7 @@ public class AddRecipeActivity extends AppCompatActivity
                 startActivity(goBackToRecipes);
 
             });
+
         }
 
 

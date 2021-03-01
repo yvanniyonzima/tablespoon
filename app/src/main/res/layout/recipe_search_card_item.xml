@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    android:padding="4dp"
+    android:id="@+id/recipe_search_card_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:id="@+id/recipe_search_card_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            />
+
+        <TextView
+            android:id="@+id/recipe_search_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:paddingLeft="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/recipe_search_card_image"
+
+            />
+
+        <TextView
+            android:id="@+id/recipe_search_card_servings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recipe_search_card_name"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@+id/recipe_search_card_image"
+            android:text="Servings"
+            android:paddingLeft="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/recipe_search_cooktime_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recipe_search_card_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@+id/recipe_search_card_servings"
+            android:text="Cook Time"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
