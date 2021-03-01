@@ -65,19 +65,24 @@ public class RecipeStepsActivity extends AppCompatActivity
         //get the recipe from the intent
         mCompleteRecipe = new Recipe((Recipe) getIntent().getSerializableExtra("RECIPE"));
 
-        if(mInstance.equals("edit_recipe"))
+        if(mInstance.equals("edit_recipe") || mInstance.equals("add_recipe_search"))
         {
-            //change cancel to save
-            mCancelAddRecipe.setText("Previous");
-
-            //make previous button invisible
-            mPreviousPage.setVisibility(View.INVISIBLE);
 
             //view the current steps
             mSteps.addAll(mCompleteRecipe.getSteps());
             mStepsViewAdapter.notifyDataSetChanged();
         }
 
+
+        //change cancel button and hif previous button
+        if(mInstance.equals("edit_recipe"))
+        {
+            //change cancel to Previous
+            mCancelAddRecipe.setText("Previous");
+
+            //make previous button invisible
+            mPreviousPage.setVisibility(View.INVISIBLE);
+        }
         //set the text for the label
         mAddStepsLabel.setText("Add steps for recipe: " + mCompleteRecipe.getName());
 

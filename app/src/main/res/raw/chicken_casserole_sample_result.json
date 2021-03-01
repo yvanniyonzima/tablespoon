@@ -1,0 +1,462 @@
+{
+  "vegetarian":false,
+  "vegan":false,
+  "glutenFree":false,
+  "dairyFree":false,
+  "veryHealthy":false,
+  "cheap":false,
+  "veryPopular":false,
+  "sustainable":false,
+  "weightWatcherSmartPoints":0,
+  "gaps":"no",
+  "lowFodmap":false,
+  "preparationMinutes":15,
+  "cookingMinutes":30,
+  "aggregateLikes":0,
+  "spoonacularScore":0.0,
+  "healthScore":0.0,
+  "pricePerServing":0.0,
+  "extendedIngredients":[
+    {
+      "id":6599,
+      "aisle":"Pasta and Rice;Ethnic Foods",
+      "image":"harissa.jpg",
+      "consistency":"solid",
+      "name":"▢ 2 cans verde enchilada sauce",
+      "nameClean":"red enchilada sauce",
+      "original":"▢ 2 10oz cans verde enchilada sauce",
+      "originalString":"▢ 2 10oz cans verde enchilada sauce",
+      "originalName":"▢ verde enchilada sauce",
+      "amount":10.0,
+      "unit":"oz",
+      "meta":[
+        "canned"
+      ],
+      "metaInformation":[
+        "canned"
+      ],
+      "measures":{
+        "us":{
+          "amount":10.0,
+          "unitShort":"oz",
+          "unitLong":"ounces"
+        },
+        "metric":{
+          "amount":283.495,
+          "unitShort":"g",
+          "unitLong":"grams"
+        }
+      }
+    },
+    {
+      "id":1011026,
+      "aisle":"Cheese",
+      "image":"cheddar-cheese.png",
+      "consistency":"solid",
+      "name":"▢ cheese",
+      "nameClean":"shredded cheese",
+      "original":"▢ 2 cups shredded cheese",
+      "originalString":"▢ 2 cups shredded cheese",
+      "originalName":"▢ shredded cheese",
+      "amount":2.0,
+      "unit":"cups",
+      "meta":[
+        "shredded"
+      ],
+      "metaInformation":[
+        "shredded"
+      ],
+      "measures":{
+        "us":{
+          "amount":2.0,
+          "unitShort":"cups",
+          "unitLong":"cups"
+        },
+        "metric":{
+          "amount":473.176,
+          "unitShort":"ml",
+          "unitLong":"milliliters"
+        }
+      }
+    },
+    {
+      "id":1005114,
+      "aisle":"Meat",
+      "image":"rotisserie-chicken.png",
+      "consistency":"solid",
+      "name":"▢ chicken pre",
+      "nameClean":"shredded chicken",
+      "original":"▢ 1 lb shredded chicken pre cooked",
+      "originalString":"▢ 1 lb shredded chicken pre cooked",
+      "originalName":"▢ shredded chicken pre cooked",
+      "amount":1.0,
+      "unit":"lb",
+      "meta":[
+        "shredded",
+        "cooked"
+      ],
+      "metaInformation":[
+        "shredded",
+        "cooked"
+      ],
+      "measures":{
+        "us":{
+          "amount":1.0,
+          "unitShort":"lb",
+          "unitLong":"pound"
+        },
+        "metric":{
+          "amount":453.592,
+          "unitShort":"g",
+          "unitLong":"grams"
+        }
+      }
+    },
+    {
+      "id":10011693,
+      "aisle":"Canned and Jarred",
+      "image":"tomatoes-canned.png",
+      "consistency":"solid",
+      "name":"canned tomatoes",
+      "nameClean":"canned tomatoes",
+      "original":"▢ 1 10oz can tomatoes with green chilis",
+      "originalString":"▢ 1 10oz can tomatoes with green chilis",
+      "originalName":"▢ tomatoes with green chilis",
+      "amount":10.0,
+      "unit":"oz",
+      "meta":[
+        "with green chilis",
+        "canned"
+      ],
+      "metaInformation":[
+        "with green chilis",
+        "canned"
+      ],
+      "measures":{
+        "us":{
+          "amount":10.0,
+          "unitShort":"oz",
+          "unitLong":"ounces"
+        },
+        "metric":{
+          "amount":283.495,
+          "unitShort":"g",
+          "unitLong":"grams"
+        }
+      }
+    },
+    {
+      "id":16202,
+      "aisle":"Canned and Jarred;Ethnic Foods",
+      "image":"refried-beans.png",
+      "consistency":"solid",
+      "name":"▢ 1 can refried beans",
+      "nameClean":"refried beans",
+      "original":"▢ 1 15oz can refried beans",
+      "originalString":"▢ 1 15oz can refried beans",
+      "originalName":"▢ refried beans",
+      "amount":15.0,
+      "unit":"oz",
+      "meta":[
+        "canned"
+      ],
+      "metaInformation":[
+        "canned"
+      ],
+      "measures":{
+        "us":{
+          "amount":15.0,
+          "unitShort":"oz",
+          "unitLong":"ounces"
+        },
+        "metric":{
+          "amount":425.243,
+          "unitShort":"g",
+          "unitLong":"grams"
+        }
+      }
+    },
+    {
+      "id":10218364,
+      "aisle":"Bakery/Bread;Pasta and Rice;Ethnic Foods",
+      "image":"flour-tortilla.jpg",
+      "consistency":"solid",
+      "name":"▢ flour tortillas torn into bite sized pieces",
+      "nameClean":"flour tortilla",
+      "original":"▢ 6-8 flour tortillas torn into bite sized pieces",
+      "originalString":"▢ 6-8 flour tortillas torn into bite sized pieces",
+      "originalName":"▢ flour tortillas torn into bite sized pieces",
+      "amount":6.0,
+      "unit":"",
+      "meta":[
+
+      ],
+      "metaInformation":[
+
+      ],
+      "measures":{
+        "us":{
+          "amount":6.0,
+          "unitShort":"",
+          "unitLong":""
+        },
+        "metric":{
+          "amount":6.0,
+          "unitShort":"",
+          "unitLong":""
+        }
+      }
+    },
+    {
+      "id":11291,
+      "aisle":"Produce",
+      "image":"spring-onions.jpg",
+      "consistency":"solid",
+      "name":"▢ green onion tops optional",
+      "nameClean":"spring onions",
+      "original":"▢ green onion tops optional",
+      "originalString":"▢ green onion tops optional",
+      "originalName":"▢ green onion tops optional",
+      "amount":1.0,
+      "unit":"serving",
+      "meta":[
+
+      ],
+      "metaInformation":[
+
+      ],
+      "measures":{
+        "us":{
+          "amount":1.0,
+          "unitShort":"serving",
+          "unitLong":"serving"
+        },
+        "metric":{
+          "amount":1.0,
+          "unitShort":"serving",
+          "unitLong":"serving"
+        }
+      }
+    }
+  ],
+  "id":-1,
+  "title":"Chicken Enchilada Casserole",
+  "readyInMinutes":45,
+  "servings":8,
+  "sourceUrl":"https://www.pinkwhen.com//chicken-enchilada-casserole-recipe",
+  "image":"https://www.pinkwhen.com/wp-content/uploads/2015/03/Chicken-Enchilada-Casserole-Recipe-.jpg",
+  "imageType":"jpg",
+  "summary":null,
+  "cuisines":[
+
+  ],
+  "dishTypes":[
+
+  ],
+  "diets":[
+
+  ],
+  "occasions":[
+
+  ],
+  "instructions":"Instructions\n\nHeat oven to 375. Prepare a 9 x 13 baking dish and begin by placing a layer of tortillas on the bottom of the dish.\n\nThen add a layer of chicken and 1/4 a cup of the shredded cheese.\n\nAdd on half a can of tomatoes and green chilies and one can of the verde enchilada sauce.\n\nFinish the layer with a half a can of the refried beans.\n\nThen cover with another layer of flour tortilla pieces, and start the layering process again.\n\nOnce you are finished layering, cover the top with the remaining shredded cheese.\n\nCover with foil, and then bake in the oven for 30 minutes.\n\nRemove the foil, add a few green onion tops, and bake for an additional 5 minutes until the cheese is melted and bubbly. Allow to sit for 10-15 minutes to allow to cool before serving. Serving any sooner may give you a soupy, but still delicious dinner.",
+  "analyzedInstructions":[
+    {
+      "name":"",
+      "steps":[
+        {
+          "number":1,
+          "step":"Heat oven to 37",
+          "ingredients":[
+
+          ],
+          "equipment":[
+            {
+              "id":404784,
+              "name":"oven",
+              "localizedName":"oven",
+              "image":"oven.jpg"
+            }
+          ]
+        },
+        {
+          "number":2,
+          "step":"Prepare a 9 x 13 baking dish and begin by placing a layer of tortillas on the bottom of the dish.",
+          "ingredients":[
+            {
+              "id":18364,
+              "name":"tortilla",
+              "localizedName":"tortilla",
+              "image":"flour-tortilla.jpg"
+            }
+          ],
+          "equipment":[
+            {
+              "id":404646,
+              "name":"baking pan",
+              "localizedName":"baking pan",
+              "image":"roasting-pan.jpg"
+            }
+          ]
+        },
+        {
+          "number":3,
+          "step":"Then add a layer of chicken and 1/4 a cup of the shredded cheese.",
+          "ingredients":[
+            {
+              "id":1011026,
+              "name":"shredded cheese",
+              "localizedName":"shredded cheese",
+              "image":"cheddar-cheese.png"
+            },
+            {
+              "id":5006,
+              "name":"whole chicken",
+              "localizedName":"whole chicken",
+              "image":"whole-chicken.jpg"
+            }
+          ],
+          "equipment":[
+
+          ]
+        },
+        {
+          "number":4,
+          "step":"Add on half a can of tomatoes and green chilies and one can of the verde enchilada sauce.",
+          "ingredients":[
+            {
+              "id":6599,
+              "name":"enchilada sauce",
+              "localizedName":"enchilada sauce",
+              "image":"harissa.jpg"
+            },
+            {
+              "id":31015,
+              "name":"green chili pepper",
+              "localizedName":"green chili pepper",
+              "image":"chili-peppers-green.jpg"
+            },
+            {
+              "id":11529,
+              "name":"tomato",
+              "localizedName":"tomato",
+              "image":"tomato.png"
+            }
+          ],
+          "equipment":[
+
+          ]
+        },
+        {
+          "number":5,
+          "step":"Finish the layer with a half a can of the refried beans.",
+          "ingredients":[
+            {
+              "id":16202,
+              "name":"refried beans",
+              "localizedName":"refried beans",
+              "image":"refried-beans.png"
+            }
+          ],
+          "equipment":[
+
+          ]
+        },
+        {
+          "number":6,
+          "step":"Then cover with another layer of flour tortilla pieces, and start the layering process again.",
+          "ingredients":[
+            {
+              "id":10218364,
+              "name":"flour tortilla",
+              "localizedName":"flour tortilla",
+              "image":"flour-tortilla.jpg"
+            }
+          ],
+          "equipment":[
+
+          ]
+        },
+        {
+          "number":7,
+          "step":"Once you are finished layering, cover the top with the remaining shredded cheese.",
+          "ingredients":[
+            {
+              "id":1011026,
+              "name":"shredded cheese",
+              "localizedName":"shredded cheese",
+              "image":"cheddar-cheese.png"
+            }
+          ],
+          "equipment":[
+
+          ]
+        },
+        {
+          "number":8,
+          "step":"Cover with foil, and then bake in the oven for 30 minutes.",
+          "ingredients":[
+
+          ],
+          "equipment":[
+            {
+              "id":404784,
+              "name":"oven",
+              "localizedName":"oven",
+              "image":"oven.jpg"
+            },
+            {
+              "id":404765,
+              "name":"aluminum foil",
+              "localizedName":"aluminum foil",
+              "image":"aluminum-foil.png"
+            }
+          ],
+          "length":{
+            "number":30,
+            "unit":"minutes"
+          }
+        },
+        {
+          "number":9,
+          "step":"Remove the foil, add a few green onion tops, and bake for an additional 5 minutes until the cheese is melted and bubbly. Allow to sit for 10-15 minutes to allow to cool before serving. Serving any sooner may give you a soupy, but still delicious dinner.",
+          "ingredients":[
+            {
+              "id":11291,
+              "name":"green onions",
+              "localizedName":"green onions",
+              "image":"spring-onions.jpg"
+            },
+            {
+              "id":1041009,
+              "name":"cheese",
+              "localizedName":"cheese",
+              "image":"cheddar-cheese.png"
+            }
+          ],
+          "equipment":[
+            {
+              "id":404784,
+              "name":"oven",
+              "localizedName":"oven",
+              "image":"oven.jpg"
+            },
+            {
+              "id":404765,
+              "name":"aluminum foil",
+              "localizedName":"aluminum foil",
+              "image":"aluminum-foil.png"
+            }
+          ],
+          "length":{
+            "number":20,
+            "unit":"minutes"
+          }
+        }
+      ]
+    }
+  ],
+  "sourceName":null,
+  "creditsText":null,
+  "originalId":null
+}

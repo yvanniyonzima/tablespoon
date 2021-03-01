@@ -4,32 +4,34 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.TypedValue;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
+import android.widget.PopupMenu;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tablespoon.classes.FirebaseDatabaseHelper;
+import com.example.tablespoon.classes.ParseJSONResults;
+import com.example.tablespoon.classes.RapidAPIClient;
 import com.example.tablespoon.classes.Recipe;
-import com.example.tablespoon.classes.RecipeCardItem;
-import com.example.tablespoon.classes.RecyclerAdapter;
+import com.example.tablespoon.classes.myRecipeRecycler.RecipeCardItem;
+import com.example.tablespoon.classes.myRecipeRecycler.RecyclerAdapter;
+import com.example.tablespoon.classes.recipeSearchRecycler.RecipeSearchActivity;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyRecipesActivity extends AppCompatActivity
 {
+    private static final String TAG = MyRecipesActivity.class.getName();
     private SearchView mRecipeSearchBar;
     private RecyclerView mRecipesRecyclerView;
     private RecyclerAdapter mRecyclerViewAdapter;
@@ -44,8 +46,7 @@ public class MyRecipesActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_recipes);
-
+        setContentView(R.layout.my_recipes_layout);
 
         //inflate searchbar and newRecipe button
         mRecipeSearchBar =(SearchView) findViewById(R.id.search_recipe);
@@ -57,9 +58,31 @@ public class MyRecipesActivity extends AppCompatActivity
         //add a new recipe
         mNewRecipe.setOnClickListener((View V) ->
         {
-            Intent newRecipeIntent = new Intent(MyRecipesActivity.this,AddRecipeActivity.class);
-            newRecipeIntent.putExtra("INSTANCE","add_new_recipe");
-            startActivity(newRecipeIntent);
+            //Creating the instance of PopupMenu
+            PopupMenu addOptionsMenu = new PopupMenu(MyRecipesActivity.this,mNewRecipe);
+            //Inflating the Popup using xml file
+            addOptionsMenu.getMenuInflater().inflate(R.menu.add_recipe_options,addOptionsMenu.getMenu());
+            //registering popup with OnMenuItemClickListener
+            addOptionsMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    if (item.getItemId() == R.id.add_recipe_manually)
+                    {
+                        Intent newRecipeIntent = new Intent(MyRecipesActivity.this,AddRecipeActivity.class);
+                        newRecipeIntent.putExtra("INSTANCE","add_new_recipe");
+                        startActivity(newRecipeIntent);
+                    }
+                    else
+                    {
+                        Intent searchRecipeIntent = new Intent(MyRecipesActivity.this, RecipeSearchActivity.class);
+                        startActivity(searchRecipeIntent);
+                    }
+                    return true;
+                }
+            });
+
+            addOptionsMenu.show();
+
         });
 
     }

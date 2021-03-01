@@ -44,4 +44,8 @@
     </string>
 
 
+    <!-- for adding recipe options menu -->
+    <string name="add_recipe_manual">Add Recipe Manually</string>
+    <string name="add_recipe_search">Search for a Recipe</string>
+
 </resources>
