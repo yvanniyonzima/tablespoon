@@ -1,5 +1,5 @@
 # Tablespoon
-My friend and I had an idea of making an application for recipes lovers where they can keep track of all their favorite ingredients. With a lot of recipe websites an application out there, we were looking for something we could add to make it different and unique. That is when Tablespoon was born. 
+My friend and I had an idea of making an application for recipes lovers where they can keep track of all their favorite recipe. With a lot of recipe websites an application out there, we were looking for something we could add to make it different and unique. That is when Tablespoon was born. 
 
 ### RECIPE MANIPULATION
 
